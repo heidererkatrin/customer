@@ -9,7 +9,6 @@ using System.Net;
 using FluentAssertions;
 using KundenProjekt;
 using KundenProjekt.Model;
-using KundenProjekt.Models;
 using Xunit;
 
 namespace KundenTest

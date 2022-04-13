@@ -1,4 +1,5 @@
-﻿using KundenProjekt.Models;
+﻿using KundenProjekt.Model;
+using KundenProjekt.Model.Exceptions;
 using Newtonsoft.Json;
 using RestSharp;
 using RestSharp.Deserializers;
@@ -6,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -27,7 +29,7 @@ namespace KundenProjekt
             }
             else
             {
-                throw new Exception(response.Content);
+                throw new CustomerNotFoundException(FirstName, LastName);
             }
         }
 
